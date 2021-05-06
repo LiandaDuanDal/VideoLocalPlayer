@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    height: 100vh;
+}
+
+.video{
+    width: 100%;
+
+}
+
+.c-video{
+    width: 100%;
+    max-width: 100;
+}
