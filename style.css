@@ -1,6 +1,7 @@
 .container {
     display: flex;
     background-color: #cccccc;
+    background-attachment: scroll;
     background-image:url("./image/backgroundimg.jpeg");
     /* background-size:contain; */
     background-size:cover;
@@ -54,8 +55,9 @@
     width: 100%;
     flex-wrap: wrap;
     background-color: rgba(0,0,0,0.7);
-    transform: translateY(100%) translateY(-5px);
-    transition: all .2s;
+    /* 自动隐藏 -debug*/
+    /* transform: translateY(100%) translateY(-5px);
+    transition: all .2s; */
 }
 
 
@@ -72,23 +74,7 @@
 }
 
 /* 下一步 按钮的变化 */
-/* .buttons button.nextstep:before {
-    content: '\f051';
-    font-family: 'Font Awesome 5 Free';
-} */
 
-
-
-/* .forward button:before{
-    content: '\f051';
-    font-family: 'Font Awesome 5 Free';
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    font-size: 20px;
-    color: rgb(223, 181, 181);
-    -webkit-font-smoothing: antialiased;
-} */
 .forwards {
     padding: 10px;
 }
@@ -140,7 +126,7 @@
 
 /* Progress bar container */
 .orange-bar {
-    height: 10px;
+    height: 80px;
     top: 0;
     left: 0;
     width: 100%;
@@ -149,9 +135,34 @@
 
 /* This represents the progress bar */
 .orange-juice {
-    height: 10px;
+    height: 80px;
     /* width: 100px;  */
     /* background-color: orangered; */
     background-color: rgba(255, 69, 0, 0.5);
 }
 
+.player-controls{
+    display:flex;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+
+}
+
+#progressWrap{
+    background-color: black;
+    height: 25px;
+    cursor: pointer;
+}
+#playProgress{
+    background-color: red;
+    width: 0px;
+    height: 25px;
+    border-right: 2px solid blue;
+}
+#showProgress{
+    background-color: white;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+}

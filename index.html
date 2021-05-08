@@ -7,22 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simple Video Player test of streaming video</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudlflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudlflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    <div class="container" id="video1">
+    <div class="container" id="videoContainer">
         <div class="c-video">
           <!-- You'll need to supply your own video URL. I was testing with the public domain movie, Big Buck Bunny -->
             <video src="/Users/lianda_duan/Movies/1.mkv" class="video"></video>
             <!-- 控制板🤖 -->
             <div class="controls">
-                <div class="orange-bar">
+
+
+                <div class="orange-bar" id = "orange-bar-click">
                     <!-- 进度条 -->
-                    <div class="orange-juice">
+                    <div class="orange-juice" id = "orange-juice">
+                        <!-- orange-juice is the real progress -->
+
                         <!-- this will be the progress bar-->
+
+
+
+
                     </div>
                 </div>
                 
@@ -43,10 +51,29 @@
                     <button id="nextstep"></button>
                     
                 </div>
-                
+                <div>
+                    <button id = "fullScreenBtn">full sereen</button>
+                </div>
+
             </div>
+            <div>
+                
+
+
+
+        
+            
         </div>
+        
     </div>
+    <div><input type ="range"></div>
+
+
+            <!-- new -->
+
+    <!-- new -->
+
     <script src="jvscript.js"></script>
+
 </body>
 </html>
