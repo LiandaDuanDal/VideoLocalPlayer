@@ -1,6 +1,9 @@
 .container {
     display: flex;
-    background-color: #ccc;
+    background-color: #cccccc;
+    background-image:url("./image/backgroundimg.jpeg");
+    /* background-size:contain; */
+    background-size:cover;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -56,16 +59,45 @@
 }
 
 
-
+/* 播放 按钮的变化 */
 .buttons button.play:before {
     content: '\f144';
     font-family: 'Font Awesome 5 Free';    
 }
-
+/* 暂停 按钮的变化 */
+/* https://fontawesome.com/icons?d=gallery&p=2&q=%5Cf28b */
 .buttons button.pause:before {
     content: '\f28b';
     font-family: 'Font Awesome 5 Free';
 }
+
+/* 下一步 按钮的变化 */
+/* .buttons button.nextstep:before {
+    content: '\f051';
+    font-family: 'Font Awesome 5 Free';
+} */
+.forward button:before{
+    content: '\f051';
+    font-family: 'Font Awesome 5 Free';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(223, 181, 181);
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+/* 下一步 按钮的变化 */
+.buttons button.previousstep:before {
+    content: '\f04e';
+    font-family: 'Font Awesome 5 Free';
+}
+
+
+
 
 /* Progress bar container */
 .orange-bar {
@@ -83,3 +115,4 @@
     /* background-color: orangered; */
     background-color: rgba(255, 69, 0, 0.5);
 }
+

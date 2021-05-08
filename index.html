@@ -1,29 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="cn">
-    <head>
-        <meta charset = "UTF-8">
-        
-        <title>H5 video player</title>
-    </head>
-    <body>
-        Video demo
-        <div class = "container">
-            <div class="video"> 
-                <video src="/Users/lianda_duan/Movies/1.mkv"></video>
-            </div class = "controls">
-            <div class = "orange-bar"></div>
-            <div class = "orange-juice"></div>
-            </div>
-            <div class = "buttons">
-                <button id = "play-pause"></button>
-            </div>
-        </div>
-        This is the buttom
-        <script src="jvscript.js">
-    </body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,15 +17,32 @@
         <div class="c-video">
           <!-- You'll need to supply your own video URL. I was testing with the public domain movie, Big Buck Bunny -->
             <video src="/Users/lianda_duan/Movies/1.mkv" class="video"></video>
+            <!-- 控制板🤖 -->
             <div class="controls">
                 <div class="orange-bar">
+                    <!-- 进度条 -->
                     <div class="orange-juice">
                         <!-- this will be the progress bar-->
                     </div>
                 </div>
+                
+                
+                <!-- 上一步 -->
+                <div class="buttons">
+                    <button id="previousstep"></button>
+                </div>
+
+                <!-- 播放/暂停按钮⏸ -->
                 <div class="buttons">
                     <button id="play-pause"></button>
                 </div>
+
+                <!-- 下一步 -->
+                <!-- <i class="fas fa-step-forward"></i> -->
+                <div class="forward">
+                    <button id="nextstep"></button>
+                </div>
+
             </div>
         </div>
     </div>
