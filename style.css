@@ -21,12 +21,12 @@
     background: none;
     border: none;
     outline: 0;
-    cursor: pointer;
+    cursor: crosshair;
 
 }
 
 .buttons button:before {
-    content: '\f144';
+    content: '⏯';
     font-family: 'Font Awesome 5 Free';
     width: 30px;
     height: 30px;
@@ -48,7 +48,7 @@
 }
 
 .controls   {
-    display: flex;
+    display:flex;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -61,13 +61,13 @@
 
 /* 播放 按钮的变化 */
 .buttons button.play:before {
-    content: '\f144';
+    content: '▶️';
     font-family: 'Font Awesome 5 Free';    
 }
 /* 暂停 按钮的变化 */
 /* https://fontawesome.com/icons?d=gallery&p=2&q=%5Cf28b */
 .buttons button.pause:before {
-    content: '\f28b';
+    content: '⏸';
     font-family: 'Font Awesome 5 Free';
 }
 
@@ -76,7 +76,10 @@
     content: '\f051';
     font-family: 'Font Awesome 5 Free';
 } */
-.forward button:before{
+
+
+
+/* .forward button:before{
     content: '\f051';
     font-family: 'Font Awesome 5 Free';
     width: 30px;
@@ -85,17 +88,53 @@
     font-size: 20px;
     color: rgb(223, 181, 181);
     -webkit-font-smoothing: antialiased;
+} */
+.forwards {
+    padding: 10px;
 }
 
+.forwards button {
+    background: none;
+    border: none;
+    outline: 0;
+    cursor: crosshair;
 
+}
 
-
-/* 下一步 按钮的变化 */
-.buttons button.previousstep:before {
-    content: '\f04e';
+.forwards button:before {
+    content: '⏩';
     font-family: 'Font Awesome 5 Free';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 28px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* previous step */
+.previous {
+    padding: 10px;
+}
+
+.previous button {
+    background: none;
+    border: none;
+    outline: 0;
+    cursor: crosshair;
+
+}
+
+.previous button:before {
+    content: '⏪';
+    font-family: 'Font Awesome 5 Free';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 28px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
 
 
 
