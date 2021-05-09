@@ -176,6 +176,18 @@ volumnRange.addEventListener('click',function(){
     video.volume = value_vol/100;
     // show get_volumn_value()
 })
+// open new file
+
+// if (window.File && window.FileReader && window.FileList && window.Blob) {
+//     document.getElementById('open').addEventListener('click',function() {
+//         var path = document.getElementById('file').getPath;
+//         console.log(path)
+
+//     }, false);
+// } else {
+//     alert('The File APIs are not fully supported in this browser.');
+// }
+
 
 }(this, document))
 
