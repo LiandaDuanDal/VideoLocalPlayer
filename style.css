@@ -39,7 +39,7 @@
 
 .c-video {
     width: 100%;
-    max-width: 1080px;
+    max-width:none;
     position: relative;
     overflow: hidden;
 }
@@ -54,10 +54,10 @@
     bottom: 0;
     width: 100%;
     flex-wrap: wrap;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(34, 214, 238, 0.7);
     /* 自动隐藏 -debug*/
-    /* transform: translateY(100%) translateY(-5px);
-    transition: all .2s; */
+    transform: translateY(100%) translateY(-5px);
+    transition: all .2s;
 }
 
 
@@ -165,4 +165,27 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 25px;
+}
+.show working_value:before{
+    color:white;
+    background-color:tomato;
+}
+.full_screen button {
+    background: none;
+    border: none;
+    outline: 0;
+    cursor: crosshair;
+
+}
+
+
+.full_screen button:before{
+    content: '🎬';
+    font-family: 'Font Awesome 5 Free';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 28px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
 }

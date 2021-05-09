@@ -16,8 +16,12 @@ var btn_previousstep = document.getElementById('previousstep')
 var videoContainer = document.getElementById("videoContainer");
 // 
 var fullScreenBtn = document.getElementById("fullScreenBtn");
+// range input -- for vloumn--myRange_volum
+var volumnRange = document.getElementById("myRange_volumn"); 
+//space to show volumn -- show_volum_space
+var space_show_volumn = document.getElementById("show_volum_space");
 // jump interval-->control gap for forward and backword
-var jump_gap = 10
+var jump_gap = 10;
 var fullScreenFlag = false; 
 // new
 // function getProgress(){
@@ -25,6 +29,13 @@ var fullScreenFlag = false;
 //     playProgress.style.width = percent * (orange_bar.offsetWidth) - 2 + "px";
 //     showProgress.innerHTML = (percent * 100).toFixed(1) + "%";
 // }
+function get_volumn_value(){
+    var vlaue_volumn =  volumnRange.value;
+    console.log("volumn: ", vlaue_volumn);
+    return vlaue_volumn;
+}
+
+
 
 // new
 
@@ -93,6 +104,7 @@ function enhanceVideoSeek(e){
     console.log(orange_bar.offsetLeft)
     console.log(orange_bar.offsetWidth)
     console.log(event.pageX)
+    console.log(percent)
     // var length = video.duration;
     // var percent = video.currentTime / video.duration;
     juice.style.width = percent * (orange_bar.offsetWidth) - 2 + "px";
@@ -120,17 +132,17 @@ btn.onclick = function (params) {
     // video.currentTime = 570; //test
     togglePlayPause();
 }
-// 向前跳跃监听器
+// forwarding listener
 btn_nextstep.onclick = function (params){
     nextStep();
 }
 
-// 向后跳跃监听器
+// backwarding listener
 btn_previousstep.onclick = function (params){
     previousStep();
 }
 
-//刷新进度条监听器
+//listener to refresh the Progress 
 video.addEventListener('timeupdate', function() {
     var juicePos = video.currentTime / video.duration;
     juice.style.width = juicePos * 100 + "%";
@@ -145,25 +157,25 @@ video.addEventListener('timeupdate', function() {
 
 //try orange-juice
 // juice.addEventListener('change')
-//单击视频触发停止和播放
+//click to start or pause
 video.addEventListener('click', function() {
     console.log('stop star clicked!!!')
 togglePlayPause()
 });
 
-// add listener to change progress
-// if(juice != null){
-// juice.addEventListener('mousedown',function(){
-//     console.log('progress bar clicked!!');
-//     videoSeek();
-// });}else{
-//     console.log("juice is null!!");
-// }
+
 orange_bar.addEventListener('mousedown',function(){
     console.log('progress bar clicked!!');
     videoSeek();
 });
 
+// set current vol: [0-1]
+volumnRange.addEventListener('click',function(){
+    var value_vol = get_volumn_value();
+    space_show_volumn.innerHTML = "Vol: "+value_vol;
+    video.volume = value_vol/100;
+    // show get_volumn_value()
+})
 
 }(this, document))
 
